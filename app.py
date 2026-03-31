@@ -107,12 +107,21 @@ TOOLS = [
             "required": ["filepath", "content"]}}}
 ]
 
-SYSTEM_PROMPT = """You are a helpful AI assistant with 4 tools: search_web, fetch_webpage, read_file, write_file.
-RULES:
-- Use tools via the function calling interface only — never as plain text or XML
-- After a tool runs and returns a result, give the user a final text answer
-- Do not call the same tool twice for the same request
-- Be accurate, helpful, and concise."""
+SYSTEM_PROMPT = """You are a strict function-calling AI assistant.
+
+TOOLS:
+- search_web
+- fetch_webpage
+- read_file
+- write_file
+
+STRICT RULES:
+- ONLY call tools using JSON function calling
+- NEVER output <function=...> or XML
+- NEVER simulate tool calls in text
+- If unsure, respond normally without tools
+- After tool execution, return final answer
+""""""
 
 # ── Session State ──────────────────────────────────────────────
 if "messages" not in st.session_state:
