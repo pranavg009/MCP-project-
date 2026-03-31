@@ -121,7 +121,7 @@ STRICT RULES:
 - NEVER simulate tool calls in text
 - If unsure, respond normally without tools
 - After tool execution, return final answer
-""""""
+"""
 
 # ── Session State ──────────────────────────────────────────────
 if "messages" not in st.session_state:
