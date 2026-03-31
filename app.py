@@ -31,7 +31,7 @@ def fetch_webpage(url):
     if not url or not url.strip().startswith(("http://", "https://")):
         return "Error: URL must start with http:// or https://"
     try:
-        r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+        r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=5)
         r.raise_for_status()
         soup = BeautifulSoup(r.text, "html.parser")
         for t in soup(["script", "style", "nav", "footer", "header", "aside"]):
