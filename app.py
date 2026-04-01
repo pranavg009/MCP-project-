@@ -158,7 +158,7 @@ TOOL_DEFINITIONS = [
         "parameters":{"type":"object","properties":{
             "text":{"type":"string"},
             "style":{"type":"string","enum":["concise","bullets","detailed"],"default":"concise"}
-        },"required":["text"]}}}}
+        },"required":["text"]}}}
 ]
 
 # FIX: using full SYSTEM_PROMPT from cell 7 and triple single quotes
