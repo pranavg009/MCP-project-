@@ -12,7 +12,7 @@ st.set_page_config(
 )
 
 client = Groq(api_key=os.environ["GROQ_API_KEY"])
-MODEL  = "llama-3.3-70b-specdec"
+MODEL  = "llama-3.3-70b-versatile"
 
 MAX_HISTORY_TURNS = 10
 MAX_TOOL_CALLS    = 6
